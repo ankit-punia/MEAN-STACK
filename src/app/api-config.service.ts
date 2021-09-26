@@ -11,7 +11,7 @@ export class ApiConfigService {
   API_BASE_URL = 'https://rpexpress-api.azurewebsites.net';
   constructor(private httpClient: HttpClient) { }
 
-  //API call to Backend service
+  //API call to Backend
   getTaskLists(url: string) {
     return this.httpClient.get<TaskListModel[]>(`${this.API_BASE_URL}/${url}`);//http://localhost:3000/tasklists
   }
